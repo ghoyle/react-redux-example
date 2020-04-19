@@ -17,10 +17,10 @@ I will try to show the current metrics for the city along with a chart (Using [H
         
 ## Event storming
 ####Dashboard
-1. Request Cities
-2. Receive Cities
+1. Request CitiesList
+2. Receive CitiesList
 3. Select city
-4. Sort Cities by locations (sensor locations)
+4. Sort CitiesList by locations (sensor locations)
 5. Sort alphabetically
 
 #### City

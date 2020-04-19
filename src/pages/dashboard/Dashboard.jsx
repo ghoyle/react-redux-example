@@ -1,12 +1,12 @@
 import React, {Component} from "react";
-import {Cities} from "../../features/cities/Cities";
+import {CitiesList} from "../../features/cities/CitiesList";
 
 class Dashboard extends Component{
 
     render() {
         return <React.Fragment>
             <h1>Dashboard</h1>
-            <Cities/>
+            <CitiesList/>
         </React.Fragment>
     }
 }
