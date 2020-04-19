@@ -1,19 +1,28 @@
-import React, { Component } from 'react'
+import React  from 'react'
 import PropTypes from 'prop-types'
 import './tile.scss'
+import {
+    useHistory
+} from "react-router-dom";
 
-export default class Tile extends Component {
-    render() {
+
+function Tile (props){
+    let history = useHistory();
+    const {items} = props;
+    const selectItem = (item) => {
+        history.push("/city/" + item.name)
+    }
         return (
             <ul className="Tile-container">
-                {this.props.items.map((post, i) => (
-                    <li key={i} className="Tile-item">{post.name}<br/><strong>Locations:</strong> {post.locations}</li>
+                {items.map((item, i) => (
+                    <li key={i} className="Tile-item" onClick={() => selectItem(item)}>{item.name}<br/><strong>Locations:</strong> {item.locations}</li>
                 ))}
             </ul>
         )
-    }
+
 }
 
 Tile.propTypes = {
     items: PropTypes.array.isRequired
 }
+export default Tile

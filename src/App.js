@@ -1,11 +1,10 @@
 import React, {Component} from 'react';
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
 import {Provider} from 'react-redux'
-// import logo from './logo.svg';
-// import { Counter } from './features/counter/Counter';
 import './App.scss';
 import Dashboard from "./pages/dashboard/Dashboard";
 import configureStore from "./app/store";
+import {City} from "./features/city/City";
 
 
 class App extends Component{
@@ -34,6 +33,9 @@ class App extends Component{
               <Switch>
                 <Route path="/counter">
                   {/*<Counter/>*/}
+                </Route>
+                <Route path="/city/:name">
+                  <City/>
                 </Route>
                 <Route path="/" component={Dashboard}/>
 
