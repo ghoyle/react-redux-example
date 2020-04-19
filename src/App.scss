@@ -1,0 +1,20 @@
+.App{
+  &-header{
+    padding: 0 30px;
+    border-bottom: 1px solid #CCCCCC;
+  }
+  &-navigation{
+    ul{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      li{
+        display: inline-block;
+        padding: 10px 15px;
+      }
+    }
+  }
+  &-body{
+    padding: 0 30px;
+  }
+}

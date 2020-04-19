@@ -1,8 +1,16 @@
-import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import { createStore, applyMiddleware, compose } from 'redux'
+import thunkMiddleware from 'redux-thunk'
+import { createLogger } from 'redux-logger'
+import rootReducer from './reducers'
 
-export default configureStore({
-  reducer: {
-    counter: counterReducer,
-  },
-});
+const loggerMiddleware = createLogger()
+
+export default function configureStore(preloadedState) {
+  const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+  return createStore(
+      rootReducer,
+      composeEnhancers(
+        applyMiddleware(thunkMiddleware, loggerMiddleware)
+      )
+  )
+}
