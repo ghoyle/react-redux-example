@@ -11,12 +11,12 @@ I will try to show the current metrics for the city along with a chart (Using [H
 -- App \
    |-- Dashboard \
    |-- City page \
-        |-- Summary Component \
-        |-- Controls component \
-        |-- Chart Component 
+      --|-- Summary Component \
+      --|-- Controls component \
+      --|-- Chart Component 
         
 ## Event storming
-####Dashboard
+#### Dashboard
 1. Request CitiesList
 2. Receive CitiesList
 3. Select city
