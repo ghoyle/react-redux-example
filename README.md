@@ -27,3 +27,6 @@ I will try to show the current metrics for the city along with a chart (Using [H
 1. Entrance
 2. Select duration
 
+## Running the app
+`cd` into the directory
+run `npm start` or `yarn start`
